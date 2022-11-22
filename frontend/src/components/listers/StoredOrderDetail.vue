@@ -18,7 +18,9 @@
             <div>
                 <String label="Status" v-model="item.status" :editMode="editMode" @change="change" />
             </div>
-            <Address offline label="StoreAddress" v-model="item.storeAddress" :editMode="false" @change="change" />
+            <div>
+                <String label="StoreAddress" v-model="item.storeAddress" :editMode="editMode" @change="change" />
+            </div>
         </v-card-text>
 
         <v-card-actions>

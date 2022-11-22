@@ -40,11 +40,18 @@ public class PolicyHandler{
 
     }
 
+    @Autowired
+    food.delivery.external.OrderService orderService;
+
     @StreamListener(value=KafkaProcessor.INPUT, condition="headers['type']=='OrderAccepted'")
     public void wheneverOrderAccepted_KakaoNotify(@Payload OrderAccepted orderAccepted){
 
         OrderAccepted event = orderAccepted;
         System.out.println("\n\n##### listener KakaoNotify : " + orderAccepted + "\n\n");
+
+        // REST Request Sample
+        
+        // orderService.getOrder(/** mapping value needed */);
 
 
         
@@ -62,6 +69,10 @@ public class PolicyHandler{
         OrderRejected event = orderRejected;
         System.out.println("\n\n##### listener KakaoNotify : " + orderRejected + "\n\n");
 
+        // REST Request Sample
+        
+        // orderService.getOrder(/** mapping value needed */);
+
 
         
 
@@ -78,6 +89,10 @@ public class PolicyHandler{
         CookStarted event = cookStarted;
         System.out.println("\n\n##### listener KakaoNotify : " + cookStarted + "\n\n");
 
+        // REST Request Sample
+        
+        // orderService.getOrder(/** mapping value needed */);
+
 
         
 
@@ -93,6 +108,10 @@ public class PolicyHandler{
 
         Picked event = picked;
         System.out.println("\n\n##### listener KakaoNotify : " + picked + "\n\n");
+
+        // REST Request Sample
+        
+        // orderService.getOrder(/** mapping value needed */);
 
 
         

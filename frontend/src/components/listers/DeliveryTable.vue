@@ -88,8 +88,8 @@
 
             this.newValue = {
                 'orderId': 0,
-                'storeAddress': {},
-                'customerAddress': {},
+                'storeAddress': '',
+                'customerAddress': '',
             }
         },
         methods: {

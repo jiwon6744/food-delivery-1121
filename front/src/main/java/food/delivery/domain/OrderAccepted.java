@@ -14,6 +14,7 @@ public class OrderAccepted extends AbstractEvent {
     private Object options;
     private String cusomerId;
     private String status;
+    private String storeAddress;
 }
 
 

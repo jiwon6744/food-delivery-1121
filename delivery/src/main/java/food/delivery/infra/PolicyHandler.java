@@ -24,7 +24,7 @@ public class PolicyHandler{
     public void whatever(@Payload String eventString){}
 
     @Autowired
-    food.delivery.external.OderService oderService;
+    food.delivery.external.OrderService orderService;
 
     @StreamListener(value=KafkaProcessor.INPUT, condition="headers['type']=='CookFinished'")
     public void wheneverCookFinished_AddToDeliveryList(@Payload CookFinished cookFinished){
@@ -34,7 +34,7 @@ public class PolicyHandler{
 
         // REST Request Sample
         
-        // oderService.getOder(/** mapping value needed */);
+        // orderService.getOrder(/** mapping value needed */);
 
 
         

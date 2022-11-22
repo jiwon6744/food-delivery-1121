@@ -18,7 +18,7 @@ import food.delivery.domain.*;
 @Service
 @Transactional
 public class PolicyHandler{
-    @Autowired OderRepository oderRepository;
+    @Autowired OrderRepository orderRepository;
     @Autowired PaymentRepository paymentRepository;
     
     @StreamListener(KafkaProcessor.INPUT)
@@ -34,7 +34,7 @@ public class PolicyHandler{
         
 
         // Sample Logic //
-        Oder.pay(event);
+        Order.pay(event);
         
         Payment.pay(event);
         
@@ -53,7 +53,7 @@ public class PolicyHandler{
         
 
         // Sample Logic //
-        Oder.cancel(event);
+        Order.cancel(event);
         
 
         
@@ -87,7 +87,7 @@ public class PolicyHandler{
         
 
         // Sample Logic //
-        Oder.updateStatus(event);
+        Order.updateStatus(event);
         
 
         
@@ -103,7 +103,7 @@ public class PolicyHandler{
         
 
         // Sample Logic //
-        Oder.updateStatus(event);
+        Order.updateStatus(event);
         
 
         
@@ -119,7 +119,7 @@ public class PolicyHandler{
         
 
         // Sample Logic //
-        Oder.updateStatus(event);
+        Order.updateStatus(event);
         
 
         

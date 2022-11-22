@@ -11,11 +11,11 @@ spring:
         - id: front
           uri: http://localhost:8081
           predicates:
-            - Path=/oders/**, /payments/**, 
+            - Path=/orders/**, /payments/**, 
         - id: store
           uri: http://localhost:8082
           predicates:
-            - Path=/storedOrders/**, /topFoods/**
+            - Path=/storedOrders/**, 
         - id: delivery
           uri: http://localhost:8083
           predicates:
@@ -24,6 +24,10 @@ spring:
           uri: http://localhost:8084
           predicates:
             - Path=/notificationLogs/**, /orderStatuses/**
+        - id: review
+          uri: http://localhost:8085
+          predicates:
+            - Path=/reviews/**, 
         - id: frontend
           uri: http://localhost:8080
           predicates:
@@ -50,11 +54,11 @@ spring:
         - id: front
           uri: http://front:8080
           predicates:
-            - Path=/oders/**, /payments/**, 
+            - Path=/orders/**, /payments/**, 
         - id: store
           uri: http://store:8080
           predicates:
-            - Path=/storedOrders/**, /topFoods/**
+            - Path=/storedOrders/**, 
         - id: delivery
           uri: http://delivery:8080
           predicates:
@@ -63,6 +67,10 @@ spring:
           uri: http://customer:8080
           predicates:
             - Path=/notificationLogs/**, /orderStatuses/**
+        - id: review
+          uri: http://review:8080
+          predicates:
+            - Path=/reviews/**, 
         - id: frontend
           uri: http://frontend:8080
           predicates:

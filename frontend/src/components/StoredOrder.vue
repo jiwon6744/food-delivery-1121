@@ -22,7 +22,7 @@
             <String label="Options" v-model="value.options" :editMode="editMode"/>
             <String label="CusomerId" v-model="value.cusomerId" :editMode="editMode"/>
             <String label="Status" v-model="value.status" :editMode="editMode"/>
-            <Address offline label="StoreAddress" v-model="value.storeAddress" :editMode="editMode" @change="change"/>
+            <String label="StoreAddress" v-model="value.storeAddress" :editMode="editMode"/>
         </v-card-text>
 
         <v-card-actions>
@@ -66,16 +66,10 @@
                     v-if="!editMode"
                     color="deep-purple lighten-2"
                     text
-                    @click="openAccept"
+                    @click="accept"
             >
                 Accept
             </v-btn>
-            <v-dialog v-model="acceptDiagram" width="500">
-                <AcceptCommand
-                        @closeDialog="closeAccept"
-                        @accept="accept"
-                ></AcceptCommand>
-            </v-dialog>
             <v-btn
                     v-if="!editMode"
                     color="deep-purple lighten-2"
@@ -91,6 +85,14 @@
                     @click="finishCook"
             >
                 FinishCook
+            </v-btn>
+            <v-btn
+                    v-if="!editMode"
+                    color="deep-purple lighten-2"
+                    text
+                    @click="reject"
+            >
+                Reject
             </v-btn>
         </v-card-actions>
 
@@ -112,12 +114,10 @@
 <script>
     const axios = require('axios').default;
 
-    import Address from './vo/Address.vue';
 
     export default {
         name: 'StoredOrder',
         components:{
-            Address,
         },
         props: {
             value: [Object, String, Number, Boolean, Array],
@@ -131,7 +131,6 @@
                 timeout: 5000,
                 text: ''
             },
-            acceptDiagram: false,
         }),
         computed:{
         },
@@ -226,17 +225,16 @@
             change(){
                 this.$emit('input', this.value);
             },
-            async accept(params) {
+            async accept() {
                 try {
                     if(!this.offline) {
-                        var temp = await axios.put(axios.fixUrl(this.value._links['accept'].href), params)
+                        var temp = await axios.put(axios.fixUrl(this.value._links['accept'].href))
                         for(var k in temp.data) {
                             this.value[k]=temp.data[k];
                         }
                     }
 
                     this.editMode = false;
-                    this.closeAccept();
                 } catch(e) {
                     this.snackbar.status = true
                     if(e.response && e.response.data.message) {
@@ -245,12 +243,6 @@
                         this.snackbar.text = e
                     }
                 }
-            },
-            openAccept() {
-                this.acceptDiagram = true;
-            },
-            closeAccept() {
-                this.acceptDiagram = false;
             },
             async startCook() {
                 try {
@@ -275,6 +267,25 @@
                 try {
                     if(!this.offline) {
                         var temp = await axios.put(axios.fixUrl(this.value._links['finishcook'].href))
+                        for(var k in temp.data) {
+                            this.value[k]=temp.data[k];
+                        }
+                    }
+
+                    this.editMode = false;
+                } catch(e) {
+                    this.snackbar.status = true
+                    if(e.response && e.response.data.message) {
+                        this.snackbar.text = e.response.data.message
+                    } else {
+                        this.snackbar.text = e
+                    }
+                }
+            },
+            async reject() {
+                try {
+                    if(!this.offline) {
+                        var temp = await axios.put(axios.fixUrl(this.value._links['reject'].href))
                         for(var k in temp.data) {
                             this.value[k]=temp.data[k];
                         }

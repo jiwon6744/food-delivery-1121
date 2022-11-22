@@ -6,16 +6,19 @@
 ![image](https://user-images.githubusercontent.com/12772082/203239532-2d7e1e05-a823-463a-a57b-6220b31e1617.png)
 
 기능적 요구사항
-1. 고객이 메뉴를 선택하여 주문한다
-1. 고객이 결제한다
-1. 주문이 되면 주문 내역이 입점상점주인에게 전달된다
-1. 상점주인이 확인하여 요리해서 배달 출발한다
-1. 고객이 주문을 취소할 수 있다
-1. 주문이 취소되면 배달이 취소된다
-1. 고객이 주문상태를 중간중간 조회한다
-1. 주문상태가 바뀔 때 마다 카톡으로 알림을 보낸다
-1. < 주문량이 많은 음식을 랭킹으로 보여준다>
-1. < 배달이 완료된 후에 리뷰작성 한다>
+1. 고객이 메뉴를 선택하여 주문한다.
+2. 고객이 선택한 메뉴에 대해 결제한다.
+3. 주문이 되면 주문 내역이 입점상점주인에게 주문정보가 전달된다.
+4. 상점주는 주문을 수락하거나 거절할 수 있다.
+5. 상점주는 요리시작때와 완료 시점에 시스템에 상태를 입력한다.
+6. 고객은 아직 요리가 시작되지 않은 주문은 취소할 수 있다.
+7. 요리가 완료되면 고객의 지역 인근의 라이더들에 의해 배송건 조회가 가능하다.
+8. 라이더가 해당 요리를 pick한 후, pick했다고 앱을 통해 통보한다.
+9. 고객이 주문상태를 중간중간 조회한다.
+10. 주문상태가 바뀔 때 마다 카톡으로 알림을 보낸다.
+11. 고객이 요리를 배달 받으면 배송확인 버튼을 탭하여, 모든 거래가 완료된다.
+12. < 주문량이 많은 음식을 랭킹으로 보여준다>
+13. < 배달이 완료된 후에 리뷰작성 한다>
 
 # 체크포인트
 # Saga (pub / Sub)
@@ -24,10 +27,10 @@
 
 # CQRS
 Command and Query Responsibility Segregation(명령과 조회의 책임 분리)
+주문/결제/수락/거절/픽업/배송완료 상태변경, 고객이 수시로 상태확인 가능함
 
 ![image](https://user-images.githubusercontent.com/12772082/203261226-69bf703f-b5d9-4207-aaea-3699248b7379.png)
 ![image](https://user-images.githubusercontent.com/12772082/203261355-1cb2f730-bcbc-4679-a8b9-02103d6bcb50.png)
-![image](https://user-images.githubusercontent.com/12772082/203261481-3fda2a0b-5f19-4d69-8ac5-d8b19dee1365.png)
 
 # Compensation / Correlation
 주문 취소 : 'cancel', 고객이 주문취소 버튼을 누른다.
@@ -45,7 +48,13 @@ Command and Query Responsibility Segregation(명령과 조회의 책임 분리)
 ![image](https://user-images.githubusercontent.com/12772082/203267143-94e86569-96fd-4499-af6e-67d7d65174d6.png)
 
 # 추가사항
-배달이 완료되면 리뷰 작성한다.
+1) 배달이 완료되면 리뷰 작성한다.
+
 ![image](https://user-images.githubusercontent.com/12772082/203269591-5d2629ec-fe2a-4f58-9d41-c007adfa87a5.png)
 ![image](https://user-images.githubusercontent.com/12772082/203270024-a13d310b-d536-4d31-842f-8cb395d8dbe6.png)
+
+2) 배달주문이 많은 음식을 조회할 수 있다.
+
+![image](https://user-images.githubusercontent.com/12772082/203273007-4ed9718c-22aa-4c54-9c66-569192dd646a.png)
+
 

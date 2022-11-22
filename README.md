@@ -39,4 +39,6 @@ Command and Query Responsibility Segregation(명령과 조회의 책임 분리)
 ![image](https://user-images.githubusercontent.com/12772082/203265993-8036b329-f9f7-4210-889b-7bc2d345c97e.png)
 ![image](https://user-images.githubusercontent.com/12772082/203266652-4fb99144-f188-427f-9d7a-da03ead5e414.png)
 # Circuit Breaker
+
 # GateWay
+![image](https://user-images.githubusercontent.com/12772082/203267143-94e86569-96fd-4499-af6e-67d7d65174d6.png)

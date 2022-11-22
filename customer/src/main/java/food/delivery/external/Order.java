@@ -8,7 +8,7 @@ public class Order {
     private Long id;
     private String foodId;
     private String customerId;
-    private Object options;
+    private String options;
     private String address;
     private String status;
 }

@@ -91,7 +91,7 @@
             this.newValue = {
                 'foodId': '',
                 'customerId': '',
-                'options': [],
+                'options': '',
                 'address': '',
                 'status': '',
             }

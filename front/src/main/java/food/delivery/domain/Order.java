@@ -38,9 +38,9 @@ public class Order  {
     
     
     
-    @ElementCollection
     
-    private List<String> options;
+    
+    private String options;
     
     
     

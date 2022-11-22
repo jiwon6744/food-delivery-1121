@@ -2,7 +2,7 @@
 
 # 예제 - 음식배달
 
-이벤트스토밍
+[이벤트스토밍]
 ![image](https://user-images.githubusercontent.com/12772082/203239532-2d7e1e05-a823-463a-a57b-6220b31e1617.png)
 
 # Table of contents

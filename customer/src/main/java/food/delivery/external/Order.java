@@ -3,7 +3,7 @@ package food.delivery.external;
 import lombok.Data;
 import java.util.Date;
 @Data
-public class Oder {
+public class Order {
 
     private Long id;
     private String foodId;

@@ -9,10 +9,10 @@ import lombok.Data;
 import java.util.Date;
 
 @Entity
-@Table(name="Oder_table")
+@Table(name="Order_table")
 @Data
 
-public class Oder  {
+public class Order  {
 
     
     @Id
@@ -74,9 +74,9 @@ public class Oder  {
     public void onPreRemove(){
     }
 
-    public static OderRepository repository(){
-        OderRepository oderRepository = FrontApplication.applicationContext.getBean(OderRepository.class);
-        return oderRepository;
+    public static OrderRepository repository(){
+        OrderRepository orderRepository = FrontApplication.applicationContext.getBean(OrderRepository.class);
+        return orderRepository;
     }
 
 
@@ -85,17 +85,17 @@ public class Oder  {
     public static void pay(OrderPlaced orderPlaced){
 
         /** Example 1:  new item 
-        Oder oder = new Oder();
-        repository().save(oder);
+        Order order = new Order();
+        repository().save(order);
 
         */
 
         /** Example 2:  finding and process
         
-        repository().findById(orderPlaced.get???()).ifPresent(oder->{
+        repository().findById(orderPlaced.get???()).ifPresent(order->{
             
-            oder // do something
-            repository().save(oder);
+            order // do something
+            repository().save(order);
 
 
          });
@@ -106,17 +106,17 @@ public class Oder  {
     public static void cancel(OrderRejected orderRejected){
 
         /** Example 1:  new item 
-        Oder oder = new Oder();
-        repository().save(oder);
+        Order order = new Order();
+        repository().save(order);
 
         */
 
         /** Example 2:  finding and process
         
-        repository().findById(orderRejected.get???()).ifPresent(oder->{
+        repository().findById(orderRejected.get???()).ifPresent(order->{
             
-            oder // do something
-            repository().save(oder);
+            order // do something
+            repository().save(order);
 
 
          });
@@ -127,17 +127,17 @@ public class Oder  {
     public static void updateStatus(OrderAccepted orderAccepted){
 
         /** Example 1:  new item 
-        Oder oder = new Oder();
-        repository().save(oder);
+        Order order = new Order();
+        repository().save(order);
 
         */
 
         /** Example 2:  finding and process
         
-        repository().findById(orderAccepted.get???()).ifPresent(oder->{
+        repository().findById(orderAccepted.get???()).ifPresent(order->{
             
-            oder // do something
-            repository().save(oder);
+            order // do something
+            repository().save(order);
 
 
          });
@@ -148,17 +148,17 @@ public class Oder  {
     public static void updateStatus(OrderRejected orderRejected){
 
         /** Example 1:  new item 
-        Oder oder = new Oder();
-        repository().save(oder);
+        Order order = new Order();
+        repository().save(order);
 
         */
 
         /** Example 2:  finding and process
         
-        repository().findById(orderRejected.get???()).ifPresent(oder->{
+        repository().findById(orderRejected.get???()).ifPresent(order->{
             
-            oder // do something
-            repository().save(oder);
+            order // do something
+            repository().save(order);
 
 
          });
@@ -169,17 +169,17 @@ public class Oder  {
     public static void updateStatus(CookStarted cookStarted){
 
         /** Example 1:  new item 
-        Oder oder = new Oder();
-        repository().save(oder);
+        Order order = new Order();
+        repository().save(order);
 
         */
 
         /** Example 2:  finding and process
         
-        repository().findById(cookStarted.get???()).ifPresent(oder->{
+        repository().findById(cookStarted.get???()).ifPresent(order->{
             
-            oder // do something
-            repository().save(oder);
+            order // do something
+            repository().save(order);
 
 
          });

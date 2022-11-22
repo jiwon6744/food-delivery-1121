@@ -39,13 +39,13 @@
 
                     <v-list-item
                         class="px-2"
-                        key="oders"
-                        to="/oders"
+                        key="orders"
+                        to="/orders"
                         @click="changeUrl()"
                         color="deep-purple lighten-2"
                         style="font-weight:700;"
                     >
-                        Oder
+                        Order
                     </v-list-item>
 
 
@@ -167,16 +167,16 @@
                                             class="mx-auto"
                                             outlined
                                             rounded
-                                            key="oders"
-                                            to="/oders"
+                                            key="orders"
+                                            to="/orders"
                                             @click="changeUrl()"
                                             color="deep-purple lighten-2"
                                             style="font-weight:500; font-size:20px; padding:15px; border:solid 2px; max-width:250px; overflow:hidden"
                                         >
-                                            Oder
+                                            Order
                                         </v-btn>
                                     </template>
-                                    <span>Oder</span>
+                                    <span>Order</span>
                                 </v-tooltip>
                             </v-card-actions>
                         </v-card>

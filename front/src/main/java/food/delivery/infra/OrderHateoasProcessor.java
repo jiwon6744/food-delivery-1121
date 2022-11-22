@@ -7,10 +7,10 @@ import org.springframework.stereotype.Component;
 import org.springframework.hateoas.EntityModel;
 
 @Component
-public class OderHateoasProcessor implements RepresentationModelProcessor<EntityModel<Oder>>  {
+public class OrderHateoasProcessor implements RepresentationModelProcessor<EntityModel<Order>>  {
 
     @Override
-    public EntityModel<Oder> process(EntityModel<Oder> model) {
+    public EntityModel<Order> process(EntityModel<Order> model) {
 
         
         return model;

@@ -12,11 +12,11 @@ import javax.servlet.http.HttpServletResponse;
 import javax.transaction.Transactional;
 
 @RestController
-// @RequestMapping(value="/oders")
+// @RequestMapping(value="/orders")
 @Transactional
-public class OderController {
+public class OrderController {
     @Autowired
-    OderRepository oderRepository;
+    OrderRepository orderRepository;
 
 
 

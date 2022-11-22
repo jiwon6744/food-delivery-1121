@@ -169,6 +169,27 @@ public class NotificationLog  {
 
         
     }
+    public static void kakaoNotify(OrderPlaced orderPlaced){
+
+        /** Example 1:  new item 
+        NotificationLog notificationLog = new NotificationLog();
+        repository().save(notificationLog);
+
+        */
+
+        /** Example 2:  finding and process
+        
+        repository().findById(orderPlaced.get???()).ifPresent(notificationLog->{
+            
+            notificationLog // do something
+            repository().save(notificationLog);
+
+
+         });
+        */
+
+        
+    }
 
 
 }

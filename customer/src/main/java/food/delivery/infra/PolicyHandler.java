@@ -143,6 +143,26 @@ public class PolicyHandler{
         
 
     }
+    @StreamListener(value=KafkaProcessor.INPUT, condition="headers['type']=='OrderPlaced'")
+    public void wheneverOrderPlaced_KakaoNotify(@Payload OrderPlaced orderPlaced){
+
+        OrderPlaced event = orderPlaced;
+        System.out.println("\n\n##### listener KakaoNotify : " + orderPlaced + "\n\n");
+
+        // REST Request Sample
+        
+        // orderService.getOrder(/** mapping value needed */);
+
+
+        
+
+        // Sample Logic //
+        NotificationLog.kakaoNotify(event);
+        
+
+        
+
+    }
 
 }
 

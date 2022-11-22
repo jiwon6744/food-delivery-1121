@@ -18,9 +18,10 @@
 1. < 배달이 완료된 후에 리뷰작성 한다. >
 
 # 체크포인트
-1. Saga (Pub / Sub)
-1. CQRS
-1. Compensation / Correlation
-1. Request / Response
-1. Circuit Breaker
-1. Gateway / Ingress
+# Saga (pub / Sub)
+
+# CQRS
+# Compensation / Correlation
+# Request / Response
+# Circuit Breaker
+# GateWay

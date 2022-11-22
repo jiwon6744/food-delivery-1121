@@ -123,6 +123,26 @@ public class PolicyHandler{
         
 
     }
+    @StreamListener(value=KafkaProcessor.INPUT, condition="headers['type']=='Paid'")
+    public void wheneverPaid_KakaoNotify(@Payload Paid paid){
+
+        Paid event = paid;
+        System.out.println("\n\n##### listener KakaoNotify : " + paid + "\n\n");
+
+        // REST Request Sample
+        
+        // orderService.getOrder(/** mapping value needed */);
+
+
+        
+
+        // Sample Logic //
+        NotificationLog.kakaoNotify(event);
+        
+
+        
+
+    }
 
 }
 

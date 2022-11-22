@@ -8,8 +8,12 @@
             <div>
                 <Number label="OrderId" v-model="item.orderId" :editMode="editMode" @change="change" />
             </div>
-            <Address offline label="StoreAddress" v-model="item.storeAddress" :editMode="false" @change="change" />
-            <Address offline label="CustomerAddress" v-model="item.customerAddress" :editMode="false" @change="change" />
+            <div>
+                <String label="StoreAddress" v-model="item.storeAddress" :editMode="editMode" @change="change" />
+            </div>
+            <div>
+                <String label="CustomerAddress" v-model="item.customerAddress" :editMode="editMode" @change="change" />
+            </div>
         </v-card-text>
 
         <v-card-actions>

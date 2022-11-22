@@ -54,9 +54,9 @@ public class StoredOrder  {
     
     
     
-    @Embedded
     
-    private Address storeAddress;
+    
+    private String storeAddress;
 
     @PostPersist
     public void onPostPersist(){
@@ -69,12 +69,9 @@ public class StoredOrder  {
 
 
 
-    public void accept(AcceptCommand acceptCommand){
+    public void accept(){
         OrderAccepted orderAccepted = new OrderAccepted(this);
         orderAccepted.publishAfterCommit();
-
-        OrderRejected orderRejected = new OrderRejected(this);
-        orderRejected.publishAfterCommit();
 
     }
     public void startCook(){
@@ -85,6 +82,11 @@ public class StoredOrder  {
     public void finishCook(){
         CookFinished cookFinished = new CookFinished(this);
         cookFinished.publishAfterCommit();
+
+    }
+    public void reject(){
+        OrderRejected orderRejected = new OrderRejected(this);
+        orderRejected.publishAfterCommit();
 
     }
 

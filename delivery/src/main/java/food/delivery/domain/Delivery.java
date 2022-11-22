@@ -32,15 +32,15 @@ public class Delivery  {
     
     
     
-    @Embedded
-    
-    private Address storeAddress;
     
     
+    private String storeAddress;
     
-    @Embedded
     
-    private Address customerAddress;
+    
+    
+    
+    private String customerAddress;
 
     @PostPersist
     public void onPostPersist(){

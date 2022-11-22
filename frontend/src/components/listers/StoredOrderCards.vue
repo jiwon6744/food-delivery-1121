@@ -73,7 +73,7 @@
                 'options': [],
                 'cusomerId': '',
                 'status': '',
-                'storeAddress': {},
+                'storeAddress': '',
             }
         },
         methods:{

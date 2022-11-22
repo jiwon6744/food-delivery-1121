@@ -15,6 +15,7 @@ public class OrderAccepted extends AbstractEvent {
     private List<String> options;
     private String cusomerId;
     private String status;
+    private String storeAddress;
 
     public OrderAccepted(StoredOrder aggregate){
         super(aggregate);

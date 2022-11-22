@@ -11,9 +11,8 @@ public class Picked extends AbstractEvent {
 
     private Long id;
     private Long orderId;
-    private Address address;
-    private Address storeAddress;
-    private Address customerAddress;
+    private String storeAddress;
+    private String customerAddress;
 
     public Picked(Delivery aggregate){
         super(aggregate);

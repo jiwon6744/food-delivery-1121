@@ -42,3 +42,8 @@ Command and Query Responsibility Segregation(명령과 조회의 책임 분리)
 
 # GateWay
 ![image](https://user-images.githubusercontent.com/12772082/203267143-94e86569-96fd-4499-af6e-67d7d65174d6.png)
+
+추가사항
+배달이 완료되면 리뷰 작성한다.
+![image](https://user-images.githubusercontent.com/12772082/203269591-5d2629ec-fe2a-4f58-9d41-c007adfa87a5.png)
+

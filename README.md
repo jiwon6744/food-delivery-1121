@@ -39,13 +39,13 @@ Command and Query Responsibility Segregation(명령과 조회의 책임 분리)
 ![image](https://user-images.githubusercontent.com/12772082/203265993-8036b329-f9f7-4210-889b-7bc2d345c97e.png)
 ![image](https://user-images.githubusercontent.com/12772082/203266652-4fb99144-f188-427f-9d7a-da03ead5e414.png)
 # Circuit Breaker
-
+고객 정보를 가져온다. 10초동안 응답 지연되면 에러발생
+![image](https://user-images.githubusercontent.com/12772082/203271787-55488e4e-6df8-4836-9c68-77fe0d8ac3ce.png)
 # GateWay
 ![image](https://user-images.githubusercontent.com/12772082/203267143-94e86569-96fd-4499-af6e-67d7d65174d6.png)
 
 # 추가사항
 배달이 완료되면 리뷰 작성한다.
-
 ![image](https://user-images.githubusercontent.com/12772082/203269591-5d2629ec-fe2a-4f58-9d41-c007adfa87a5.png)
 ![image](https://user-images.githubusercontent.com/12772082/203270024-a13d310b-d536-4d31-842f-8cb395d8dbe6.png)
 

@@ -35,5 +35,8 @@ Command and Query Responsibility Segregation(명령과 조회의 책임 분리)
 ![image](https://user-images.githubusercontent.com/12772082/203264794-5a72122a-2dd7-4b1e-b5e8-38b2f69db72d.png)
 
 # Request / Response
+고객 정보(주소)를 가져오기 위한 요청
+![image](https://user-images.githubusercontent.com/12772082/203265993-8036b329-f9f7-4210-889b-7bc2d345c97e.png)
+![image](https://user-images.githubusercontent.com/12772082/203266652-4fb99144-f188-427f-9d7a-da03ead5e414.png)
 # Circuit Breaker
 # GateWay

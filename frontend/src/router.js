@@ -23,6 +23,9 @@ import NotificationLogDetail from "./components/listers/NotificationLogDetail"
 
 import OrderStatusView from "./components/OrderStatusView"
 import OrderStatusViewDetail from "./components/OrderStatusViewDetail"
+import ReviewManager from "./components/listers/ReviewCards"
+import ReviewDetail from "./components/listers/ReviewDetail"
+
 
 export default new Router({
     // mode: 'history',
@@ -102,6 +105,17 @@ export default new Router({
                 name: 'OrderStatusViewDetail',
                 component: OrderStatusViewDetail
             },
+            {
+                path: '/reviews',
+                name: 'ReviewManager',
+                component: ReviewManager
+            },
+            {
+                path: '/reviews/:id',
+                name: 'ReviewDetail',
+                component: ReviewDetail
+            },
+
 
 
     ]

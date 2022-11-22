@@ -23,11 +23,17 @@
 ![image](https://user-images.githubusercontent.com/12772082/203246777-1d0080aa-b2c7-45b8-970a-2d13b7e54227.png)
 
 # CQRS
+Command and Query Responsibility Segregation(명령과 조회의 책임 분리)
+
 ![image](https://user-images.githubusercontent.com/12772082/203261226-69bf703f-b5d9-4207-aaea-3699248b7379.png)
 ![image](https://user-images.githubusercontent.com/12772082/203261355-1cb2f730-bcbc-4679-a8b9-02103d6bcb50.png)
 ![image](https://user-images.githubusercontent.com/12772082/203261481-3fda2a0b-5f19-4d69-8ac5-d8b19dee1365.png)
 
 # Compensation / Correlation
+주문 취소 : 'cancel', 고객이 주문취소 버튼을 누른다.
+![image](https://user-images.githubusercontent.com/12772082/203264287-8f407399-fe18-47f3-90ee-0a3c25c7c5ce.png)
+![image](https://user-images.githubusercontent.com/12772082/203264794-5a72122a-2dd7-4b1e-b5e8-38b2f69db72d.png)
+
 # Request / Response
 # Circuit Breaker
 # GateWay

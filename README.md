@@ -23,6 +23,10 @@
 ![image](https://user-images.githubusercontent.com/12772082/203246777-1d0080aa-b2c7-45b8-970a-2d13b7e54227.png)
 
 # CQRS
+![image](https://user-images.githubusercontent.com/12772082/203261226-69bf703f-b5d9-4207-aaea-3699248b7379.png)
+![image](https://user-images.githubusercontent.com/12772082/203261355-1cb2f730-bcbc-4679-a8b9-02103d6bcb50.png)
+![image](https://user-images.githubusercontent.com/12772082/203261481-3fda2a0b-5f19-4d69-8ac5-d8b19dee1365.png)
+
 # Compensation / Correlation
 # Request / Response
 # Circuit Breaker

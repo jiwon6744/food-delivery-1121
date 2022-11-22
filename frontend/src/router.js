@@ -13,6 +13,8 @@ import PaymentDetail from "./components/listers/PaymentDetail"
 import StoredOrderManager from "./components/listers/StoredOrderCards"
 import StoredOrderDetail from "./components/listers/StoredOrderDetail"
 
+import TopFoodView from "./components/TopFoodView"
+import TopFoodViewDetail from "./components/TopFoodViewDetail"
 import DeliveryManager from "./components/listers/DeliveryCards"
 import DeliveryDetail from "./components/listers/DeliveryDetail"
 
@@ -61,6 +63,16 @@ export default new Router({
                 component: StoredOrderDetail
             },
 
+            {
+                path: '/topFoods',
+                name: 'TopFoodView',
+                component: TopFoodView
+            },
+            {
+                path: '/topFoods/:id',
+                name: 'TopFoodViewDetail',
+                component: TopFoodViewDetail
+            },
             {
                 path: '/deliveries',
                 name: 'DeliveryManager',

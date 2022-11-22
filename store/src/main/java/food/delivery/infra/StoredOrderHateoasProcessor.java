@@ -14,6 +14,7 @@ public class StoredOrderHateoasProcessor implements RepresentationModelProcessor
         model.add(Link.of(model.getRequiredLink("self").getHref() + "/accept").withRel("accept"));
         model.add(Link.of(model.getRequiredLink("self").getHref() + "/startcook").withRel("startcook"));
         model.add(Link.of(model.getRequiredLink("self").getHref() + "/finishcook").withRel("finishcook"));
+        model.add(Link.of(model.getRequiredLink("self").getHref() + "/reject").withRel("reject"));
 
         
         return model;

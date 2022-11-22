@@ -23,13 +23,13 @@ public class StoredOrderController {
     @RequestMapping(value = "storedOrders/{id}/accept",
         method = RequestMethod.PUT,
         produces = "application/json;charset=UTF-8")
-    public StoredOrder accept(@PathVariable(value = "id") Long id, @RequestBody AcceptCommand acceptCommand, HttpServletRequest request, HttpServletResponse response) throws Exception {
+    public StoredOrder accept(@PathVariable(value = "id") Long id, HttpServletRequest request, HttpServletResponse response) throws Exception {
             System.out.println("##### /storedOrder/accept  called #####");
             Optional<StoredOrder> optionalStoredOrder = storedOrderRepository.findById(id);
             
             optionalStoredOrder.orElseThrow(()-> new Exception("No Entity Found"));
             StoredOrder storedOrder = optionalStoredOrder.get();
-            storedOrder.accept(acceptCommand);
+            storedOrder.accept();
             
             storedOrderRepository.save(storedOrder);
             return storedOrder;
@@ -68,6 +68,25 @@ public class StoredOrderController {
             optionalStoredOrder.orElseThrow(()-> new Exception("No Entity Found"));
             StoredOrder storedOrder = optionalStoredOrder.get();
             storedOrder.finishCook();
+            
+            storedOrderRepository.save(storedOrder);
+            return storedOrder;
+            
+    }
+    
+
+
+
+    @RequestMapping(value = "storedOrders/{id}/reject",
+        method = RequestMethod.PUT,
+        produces = "application/json;charset=UTF-8")
+    public StoredOrder reject(@PathVariable(value = "id") Long id, HttpServletRequest request, HttpServletResponse response) throws Exception {
+            System.out.println("##### /storedOrder/reject  called #####");
+            Optional<StoredOrder> optionalStoredOrder = storedOrderRepository.findById(id);
+            
+            optionalStoredOrder.orElseThrow(()-> new Exception("No Entity Found"));
+            StoredOrder storedOrder = optionalStoredOrder.get();
+            storedOrder.reject();
             
             storedOrderRepository.save(storedOrder);
             return storedOrder;

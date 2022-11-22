@@ -6,7 +6,6 @@
         </v-card-title>
 
         <v-card-text>
-            <Boolean label="Accept" v-model="value.accept" :editMode="editMode"/>
         </v-card-text>
 
         <v-card-actions>
@@ -42,7 +41,6 @@
             value: {},
         }),
         created() {
-            this.value.accept = false;
         },
         watch: {
         },

@@ -56,26 +56,6 @@ public class TopFoodViewHandler {
             e.printStackTrace();
         }
     }
-    @StreamListener(KafkaProcessor.INPUT)
-    public void whenReviewWrite_then_UPDATE_2(@Payload ReviewWrite reviewWrite) {
-        try {
-            if (!reviewWrite.validate()) return;
-                // view 객체 조회
-            Optional<TopFood> topFoodOptional = topFoodRepository.findById(reviewWrite.getOrderId());
-
-            if( topFoodOptional.isPresent()) {
-                 TopFood topFood = topFoodOptional.get();
-            // view 객체에 이벤트의 eventDirectValue 를 set 함
-                topFood.setId("작성됨");    
-                // view 레파지 토리에 save
-                 topFoodRepository.save(topFood);
-                }
-
-
-        }catch (Exception e){
-            e.printStackTrace();
-        }
-    }
 
 }
 

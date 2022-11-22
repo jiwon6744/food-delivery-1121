@@ -12,9 +12,6 @@
             <div>
                 <Number label="OrderCount" v-model="item.orderCount" :editMode="editMode" @change="change" />
             </div>
-            <div>
-                <String label="Review" v-model="item.review" :editMode="editMode" @change="change" />
-            </div>
         </v-card-text>
     </v-card>
 

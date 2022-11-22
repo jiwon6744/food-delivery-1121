@@ -15,7 +15,6 @@ public class TopFood {
         private Long id;
         private String foodId;
         private Integer orderCount;
-        private String review;
 
 
 }

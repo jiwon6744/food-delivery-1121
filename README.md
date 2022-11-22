@@ -19,9 +19,7 @@
 
 # 체크포인트
 # Saga (pub / Sub)
-pub
 ![image](https://user-images.githubusercontent.com/12772082/203246633-1a2602c9-37cb-4b7d-bd78-ddbe9e99a1f3.png)
-sub
 ![image](https://user-images.githubusercontent.com/12772082/203246777-1d0080aa-b2c7-45b8-970a-2d13b7e54227.png)
 
 # CQRS
